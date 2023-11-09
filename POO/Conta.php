@@ -34,13 +34,13 @@ class Conta{
         echo "Saldo disponível R$".$this->getSaldo();
     }
     function imprimirDados(){
-        echo "<h1> Extrato da Conta </h1>";
+        echo "<h1> Dados da Conta </h1>";
         echo "Nome: ". $this->nome."<br>";
         echo "Numero da Conta: ". $this->numConta."<br><br>";
         $this->imprimirSaldo();
     }
     function debitar($valor){
-        if($valor <= $this->saldo){
+        if($valor <= $this->saldo && $valor > 0){
             $this->saldo -= $valor;
             echo "O valor R$".$valor." foi sacado com sucesso!";
         }else{

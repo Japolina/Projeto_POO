@@ -70,14 +70,16 @@
         </form>
     </div>
     <?php
-    include("./Conta.php");
-    if (isset($_POST['add'])) {
+    include("./config.php");
+    if (isset($_SESSION['minha_conta'])) {
+        $obj = $_SESSION['minha_conta'];
+    }
+    if(isset($_POST['add'])){
         if (!empty($_POST['nome']) && !empty($_POST['numConta']) && !empty($_POST['saldo'])) {
             $nome = $_POST['nome'];
             $numConta = $_POST['numConta'];
             $saldo = $_POST['saldo'];
 
-            $obj = new Conta();
             $obj->setNome($nome);
             $obj->setNumConta($numConta);
             $obj->setSaldo($saldo);

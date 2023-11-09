@@ -32,6 +32,9 @@
         background-color: olivedrab ;
         color: white;
     }
+    .imprimir{
+        padding: 2px 25px;
+    }
 
 </style>
 
@@ -41,7 +44,7 @@
         <a href="./cadastrar.php">Cadastrar</a>
         <a href="./depositar.php">Depositar</a>
         <a href="./sacar.php">Sacar</a>
-        <a href="./imprimir.php">Mostrar Saldo</a>
+        <a class="imprimir" href="./imprimir.php">Mostrar Saldo</a>
     </div>
 
 </body>

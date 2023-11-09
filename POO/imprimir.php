@@ -7,9 +7,16 @@
 </head>
 <body>
     <?php
-    echo "<h1> Saldo do Cliente";
-    $obj-> new Conta();
-    $obj->imprimirSaldo();
+    include "Conta.php";
+        session_start();
+        
+        if(isset($_SESSION['minha_conta'])){
+            $obj = $_SESSION['minha_conta'];
+        }
+        echo "<h1> Saldo do Cliente </h1>";
+
+        $obj->imprimirDados();
+        header("refresh:10,index.php");
     ?>
 </body>
 </html>
